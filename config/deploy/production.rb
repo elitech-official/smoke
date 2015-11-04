@@ -6,9 +6,13 @@
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
+set :stage, :production
+ 
+#role :app, %w{deploy@<91.215.138.149}
+#role :web, %w{deploy@<91.215.138.149}
+#role :db,  %w{deploy@<91.215.138.149}
 
-
-
+server "178.20.159.61", user: 'root', roles: %w{app web db}
 # role-based syntax
 # ==================
 
