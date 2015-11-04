@@ -20,3 +20,5 @@ test:
 production:
   <<: *default
   database: kalyan_production
+  username: root
+  password: default_password
