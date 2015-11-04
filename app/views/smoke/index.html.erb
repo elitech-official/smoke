@@ -1,0 +1,62 @@
+<%= render 'header' %>
+<div class="kalyan body">
+<h2 class="text-center"> Кальяны от StarBuzz - это: </h2>
+<% @kalyan.each do |item|%>
+  <%=render 'kalyan_item'%>
+<% end %>
+</div>
+<div class="overview-container">
+  <h2> Наш видеообзор E-Hose от StarBuzz </h2>
+  <div class="overview-text">
+    <div class="overview-list">
+      <ul class="overview ulist">
+        <li class="overview litem"> <a class="video text" href="#"> Что такое E-Hose </a> </li>
+        <li class="overview litem"> <a class="video text" href="#"> Как отличить оригинал от подделки </a> </li>
+        <li class="overview litem"> <a class="video text" href="#"> Сколько он живёт  </a> </li>
+        <li class="overview litem"> <a class="video text" href="#"> Еще какая-то инфа </a> </li>
+        <li class="overview litem"> <a class="video text" href="#"> Бла-бла-бла </a> </li>
+      <ul>
+    </div>
+  </div>
+  <div class="overview-video">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LbBOnRdcUMw" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="kalyan body">
+<h2 class="text-center"> Кальяны от StarBuzz: </h2>
+<% @kalyan.each do |item|%>
+  <%=render 'kalyan_item'%>
+<% end %>
+</div>
+<div class="kalyan body">
+<h2 class="text-center"> Картрижды: </h2>
+<% @cartridge.each do |cartridge|%>
+  <%= render :partial => "cartridge", :locals => {:cartridge => cartridge} %>
+<% end %>
+</div>
+<h1 class="text-center"> Тест-драйв кальяна от StarBuzz </h1>
+<div class="test-drive-container">
+  <div class="test-drive-text">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget ante dui. Integer fermentum eleifend consequat. Ut euismod laoreet ultricies. Integer molestie sem eu felis porttitor, quis aliquet massa dictum. Ut leo lacus, bibendum sed ligula at, posuere lacinia urna. Cras vitae tristique nisl. Suspendisse potenti. Cras ullamcorper bibendum blandit. In ut erat rhoncus leo vestibulum congue eget in lectus. Proin tincidunt porta lectus, sit amet porttitor ligula scelerisque eu. Proin ut dolor in nisl tristique cursus. Integer commodo sem eget enim venenatis sagittis.
+    </p>
+  </div>
+  <div class="test-drive-contact">
+    <%= render 'contact'%>
+  </div>
+</div>  
+<div class="carousel-container">
+  <%= render 'carousel'%>
+</div>  
+<div class="FAQ-container">
+  <%= 12.times do %>
+  <%= render 'question'%>
+  <% end %>
+</div>
+<div class="still-question-container">
+  <h1> Всё еще остались вопросы? </h1>
+  <div class="still-render">
+    <%= render 'contact'%>
+  </div>
+</div>
+<%= render 'footer'%>
