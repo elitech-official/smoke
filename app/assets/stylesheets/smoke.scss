@@ -42,6 +42,9 @@
     height: 100px;
     width: 33%;
     text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     min-width: 320px;
     & img{
@@ -191,6 +194,7 @@ h1{
 }
 
 .contact-container{
+  filter: alpha(opacity=70);
   max-height: 450px;
   position: absolute;
   left: 5%;
@@ -211,7 +215,8 @@ h1{
     border: 2px solid black;
     text-align: center;
     background-color: white;
-    opacity: .7;    
+    opacity: .7;
+    filter: alpha(opacity=70);    
     margin: 0 auto;
     & *{
       float: none;
@@ -404,10 +409,12 @@ menu, nav, section { display: block; }
 
 .modal-link:hover{
   background-color: white;
-  transition: 1.5s ease;
+  -webkit-transition: 1.5s ease;
+          transition: 1.5s ease;
   & > h4{
     color: red;
-    transition: 1.5s ease;
+    -webkit-transition: 1.5s ease;
+            transition: 1.5s ease;
   }
 }
 
@@ -417,7 +424,8 @@ menu, nav, section { display: block; }
   width: 100%;
   margin: 0 auto;
   &:hover{
-    transition: 1.5s ease;
+    -webkit-transition: 1.5s ease;
+            transition: 1.5s ease;
     color: red;
     background-color: white;
   }
@@ -453,7 +461,8 @@ menu, nav, section { display: block; }
       }
     }
     & a:hover > div{
-      transition: 1.5s ease;
+      -webkit-transition: 1.5s ease;
+              transition: 1.5s ease;
       color: green;
       background-color: white;
       text-decoration: none;
@@ -478,7 +487,8 @@ menu, nav, section { display: block; }
   margin-top: -150px;
   margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
   display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
-  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  opacity: 0;
+  filter: alpha(opacity=0); /* пoлнoстью прoзрaчнo для aнимирoвaния */
   z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
   padding: 20px 10px;
 }
