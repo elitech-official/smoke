@@ -1,10 +1,10 @@
-<div class="kalyan-item container">
+<div class="kalyan-item container cartridge">
   <div class="kalyan-image">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEXBgoG1xCVbi6Xa1gUKr86wR8atlHDeMas9SLDTpBccF4Dp_" alt="Кальян">
+    <%= image_tag cartridge.image %>
   </div>
   <div class="item-text">
     <h4 class="item-title"> <%= cartridge.name%> </h4>
-    <p class="item-description"> <%= cartridge.cost%> </p>
+    <p class="item-description"> <%= cartridge.cost%>  UAH/картридж </p>
     <a href=#>
       <div class="div-button">
         Купить

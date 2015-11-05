@@ -1,37 +1,78 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
 }
 
 .header{
-  display: inline-block;
+  & *{
+    float: left;
+  }
+  & .row{
+    width: 100%;
+    height: 15%;
+    min-height: 50px;
+    line-height: 100px;
+  }
+  & .phone{
+    display: block;
+    padding-top: 10px;
+    margin-right: 5%;
+    float: right;
+    font-size: 2em;
+    width: calc(33% - 100px);
+    min-width: 320px;
+    & span{
+      display: block;
+      height: 50%;
+      margin: 0 auto;
+      float: none;
+      text-align: center;
+      color: white;
+    }
+    & .modal-link{
+      width: 100%;
+      background-color: #D3D3D3;
+    }
+  }
+  & .image{
+    margin: 0 auto;
+    float: left;
+    height: 100px;
+    width: 33%;
+    text-align: center;
+    display: flex;
+    min-width: 320px;
+    & img{
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  & .text{
+    width: 33%;
+    text-align: center;
+    height: 100px;
+    min-width: 320px;
+  }
   & .order{
     display: inline;
     float: rigth;
   }
-  & .ellipse{
-    border-radius: 50%;
-    width: 25%;
-    background-color: white;
-    text-align: center;
-    height: 25px;
-    line-height: 25px;
-    
-  }
 }
 
 .header-container{
-  height: 400px;
+  height: 600px;
   width: 100%;
-  background-color: green;
+  background: url('header.jpg') no-repeat;
+  background-size: cover;
 }
 
 .kalyan-item.container{
-  width: 23%;
+  width: 20%;
   height: 400px;
-  display: inline-block;
-  border: 1px black solid;
-  margin: 20px 10px 10px 10px;
+  display: block;
+  float: left;
 }
 .kalyan-image{
   display: block;
@@ -39,11 +80,19 @@
   width: 250px;
   height: 250px;
   margin: 0 auto;
-  background-color: red;
   & img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+  }
+}
+
+.why.body{
+  margin: 50px 0 50px 0;
+  & > h2{
+    display: block;
+    margin: 0 0 0 25px;
+    font-weight: 1000;
   }
 }
 
@@ -92,6 +141,7 @@ h1{
   background-color: green;
   color: white;
   margin: 0 auto;
+  text-decoration: none;
 }
 .item-text{
   & .item-title{
@@ -110,6 +160,20 @@ h1{
   width: 100%;
   height: 600px;
   display: block;
+  background: url('volan.jpg');
+  background-size: cover;
+  & h1{
+    display:block;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    position: absolute;
+    left: 25%;
+    font-size: 3em;
+    letter-spacing: 3px;
+    color: #2F4F4F;
+  }
   & .test-drive-text{
     width: 50%;
     display: inline-block;
@@ -127,64 +191,55 @@ h1{
 }
 
 .contact-container{
-  width: 80%;
-  height: 80%;
+  max-height: 450px;
+  position: absolute;
+  left: 5%;
   margin: 0 auto;
-  border-radius: 15px;
-  border: 2px solid black;
-  text-align: center;
-  background-color: white;
-  opacity: .7;
-  & h3{
-    margin: 30px;
-    font-size: 2em;
+  display: block;
+  & .text{
+    display: block;
+    margin: 15px 0 15px 0;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 1200;
   }
-  & .contact-input{
-    width: 75%;
-    margin: 10px auto;
-    padding: 10px;
-  }
-  & .contact-safe{
-    font-size: 0.7em;
+  & .contact-form{
+    width: 100%;
+    min-width: 320px;
+    top: 125px;
+    border-radius: 15px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+    opacity: .7;    
+    margin: 0 auto;
+    & *{
+      float: none;
+      text-align: center;
+    }
+    & h4{
+      margin: 10px;
+    }
+    & .contact-input{
+      width: 75%;
+      height: 15%;
+      margin: 5% auto;
+      padding: 3%;
+      font-size: 1.5em;
+    }
+    & .make-order-button{
+      width: 85%;
+      height: 15%;
+      margin: 5% auto;
+      padding: 3%;
+    }
+    & .contact-safe{
+      font-size: 0.7em;
+    }
   }
 }
 
-    #rotator { width: 920px; height: 800px; position: relative; background: white; padding: 20px; }
-    #block-1 { background: #d5fcff; }
-    #block-2 { background: #e1ffd5; }
-    #block-3 { background: #ffffd8; }
-    #rotator > div { 
-      position: absolute; 
-      overflow: hidden;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-    }
-    #rotator > div > div { 
-      padding: 20px; 
-    }
-    #rotator > div > div img {
-      float: right;
-      margin: 0 0 2px 10px;
-    }
-    #rotator .active { top: 20px; left: 20px; width: 580px; height: 800px; }
-    #rotator .non-active-top { top: 20px; left: 620px; height: 130px; width: 320px; }
-    #rotator .non-active-bottom { top: 170px; left: 620px; height: 130px; width: 320px; }   
-    #rotator .non-active-top:hover, #rotator .non-active-bottom:hover { 
-      cursor: pointer;
-      -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4); 
-      -moz-box-shadow: 0 0 10px rgba(0,0,0,0.4); 
-      box-shadow: 0 0 10px rgba(0,0,0,0.4); 
-    }
-    #rotator h2 {
-      text-align: center; 
-      line-height: 130px;
-    }
-    #rotator .active h2 {
-      display: none;
-    }
-
-html { background: #fff3c9; }
+html { background: #FFF; }
 body { font: 14px/1.4 Georgia, serif; color: #2d2d2d; }
 
 article, aside, figure, footer, header, hgroup,
@@ -284,4 +339,221 @@ menu, nav, section { display: block; }
 }
 .text-center{
   text-align: center;
+}
+
+.modal-link{
+    width: 75%;
+    height: 15%;
+    right: 50px;
+    margin: 5% auto;
+    padding: 3%;
+    display: block;
+    background-color: white;
+    & h4{
+      font-size: .7em;
+      width: 100%;
+      color: gray;
+      text-align: center;
+    }
+}
+
+.why.body{
+  display:block;
+  height: 800px;
+}
+
+.why.container{
+  border: none;
+  width: 25%;
+  height: 400px;
+  display: block;
+  float: left;
+  & img{
+    border: none;
+  }
+  & .why.text{
+    text-align: center;
+    height: 25%;
+    max-height: 150px;
+    //margin: 15px auto;
+    & h4{
+      color: red;
+      font-size: 2.3em;
+      font-weight: 1000;
+    }
+    & p{
+      display: block;
+      text-align: center;
+      color: black;
+      font-size: 1em;
+      font-weight: 700;
+    }
+  }
+}
+
+.clear-none{
+  float: none;
+  width: 100%;
+  height:1px;
+  display: block;
+}
+
+.hidden{
+  display: none;
+}
+
+.modal-link:hover{
+  background-color: white;
+  transition: 1.5s ease;
+  & > h4{
+    color: red;
+    transition: 1.5s ease;
+  }
+}
+
+.make-order-button{
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 100%;
+  margin: 0 auto;
+  &:hover{
+    transition: 1.5s ease;
+    color: red;
+    background-color: white;
+  }
+}
+
+.kalyan-item.container{
+  height: 450px;
+  letter-spacing: 1px;
+  margin: 20px auto;
+  & .item-text{
+    width: 80%;
+    margin: 10px auto;
+    & h4{
+      line-height: 21px;
+      height: 60px;
+      display: block;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+    }
+    & p{
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: center;
+      display: block;
+      margin-bottom: 10px;
+    }
+    & a{
+      text-decoration: none;
+      & > div{
+        font-size: 1.5em;
+        font-color: white;
+        font-weight: bold;
+      }
+    }
+    & a:hover > div{
+      transition: 1.5s ease;
+      color: green;
+      background-color: white;
+      text-decoration: none;
+    }
+  }
+}
+.cartridge-body{
+  display: block;
+  float: none;
+  height: 2000px;
+}
+
+#modal_form {
+  width: 340px; 
+  height: 340px; /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 5px;
+  border: 3px #000 solid;
+  background: #fff;
+  position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%; /* пoлoвинa экрaнa слевa */
+  margin-top: -150px;
+  margin-left: -150px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+  display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+  z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position:fixed; /* всегдa перекрывaет весь сaйт */
+  background-color:#000; /* чернaя */
+  opacity:0.8; /* нo немнoгo прoзрaчнa */
+  -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+  filter:alpha(opacity=80);
+  width:100%; 
+  height:100%; /* рaзмерoм вo весь экрaн */
+  top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left:0;
+  cursor:pointer;
+  display:none; /* в oбычнoм сoстoянии её нет) */
+}
+
+.modal{
+  & .contact-form{
+  top: 15px; 
+  }
+}
+.flash{
+  height: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  background-color: #7CFC00;
+  color: white;
+  text-align: center;
+}
+
+.absolute-block{
+  width: 50%;
+  left: 40%;
+  top: 60%;
+  position: absolute;
+  float:right;
+  & .title, .text{
+    color: white;
+    font-weight: 900;
+  }
+  & .title{
+    font-size: 3em;
+    letter-spacing: 3px;
+  }
+  & .text{
+    font-size: 2em;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+}
+
+.fancybox{
+  & img{
+    border-radius: 15%;
+  }
+}
+
+.contact-container.test{
+  position: absolute;
+  display: block;
+  width: 25%;
+  left: 60%;
+  height: 70%;
+
 }

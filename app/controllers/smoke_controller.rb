@@ -8,6 +8,11 @@ class SmokeController < ApplicationController
   end
 
   def create
+    contact = Contact.new(contact_params)
+    if contact.save
+      redirect_to root_path
+      flash[:notice] = "Спасибо, ваша заявка принята"
+    end
   end
 
   def show
@@ -21,4 +26,9 @@ class SmokeController < ApplicationController
 
   def delete
   end
+  
+  def contact_params
+    params.require(:contact).permit(:name, :time, :phone)
+  end
+  
 end

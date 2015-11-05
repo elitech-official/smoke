@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :smoke
-  
+  resources :contact
   root :to => "smoke#index"
   #get 'smoke/index'
 

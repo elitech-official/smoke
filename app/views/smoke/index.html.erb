@@ -1,10 +1,8 @@
-<%= render 'header' %>
-<div class="kalyan body">
-<h2 class="text-center"> Кальяны от StarBuzz - это: </h2>
-<% @kalyan.each do |item|%>
-  <%=render 'kalyan_item'%>
-<% end %>
+<div class="why body">
+<h2 class="text-center"> E-HOSE - ЭТО </h2>
+<%= render 'why_e_hose' %>
 </div>
+<div class="clear-none"></div>
 <div class="overview-container">
   <h2> Наш видеообзор E-Hose от StarBuzz </h2>
   <div class="overview-text">
@@ -24,29 +22,162 @@
 </div>
 <div class="kalyan body">
 <h2 class="text-center"> Кальяны от StarBuzz: </h2>
-<% @kalyan.each do |item|%>
-  <%=render 'kalyan_item'%>
-<% end %>
+<div class="kalyan-item container">
+  <div class="kalyan-image">
+     <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/black1'%> title="Черный кальян E-HOSE">
+      <%= image_tag 'items/black1'%>
+    </a>
+    <div class="hidden">
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/black2'%> title="Черный кальян E-HOSE">
+        <%= image_tag 'items/black2'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/black3'%> title="Черный кальян E-HOSE">
+        <%= image_tag 'items/black3'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/black4'%> title="Черный кальян E-HOSE">
+        <%= image_tag 'items/black4'%>
+      </a>
+    </div>
+  </div>
+  <div class="item-text">
+    <h4> <%= @kalyan[0].name %> </h4>
+    <p> <%= @kalyan[0].cost%>  UAH </p>
+    <a href=#>
+      <div class="div-button">
+        КУПИТЬ
+      </div>
+    </a>
+  </div>
 </div>
-<div class="kalyan body">
+
+
+<div class="kalyan-item container">
+  <div class="kalyan-image">
+     <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/blue1'%> title="Синий кальян E-HOSE">
+      <%= image_tag 'items/blue1'%>
+    </a>
+    <div class="hidden">
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/blue2'%> title="Синий кальян E-HOSE">
+        <%= image_tag 'items/blue2'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/blue3'%> title="Синий кальян E-HOSE">
+        <%= image_tag 'items/blue3'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/blue4'%> title="Синий кальян E-HOSE">
+        <%= image_tag 'items/blue4'%>
+      </a>
+    </div>
+  </div>
+  <div class="item-text">
+    <h4> <%= @kalyan[1].name %> </h4>
+    <p> <%= @kalyan[1].cost%>  UAH </p>
+    <a href=#>
+      <div class="div-button">
+        КУПИТЬ
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<div class="kalyan-item container">
+  <div class="kalyan-image">
+     <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/pink1'%> title="Розовый кальян E-HOSE">
+      <%= image_tag 'items/pink1'%>
+    </a>
+    <div class="hidden">
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/pink2'%> title="Розовый кальян E-HOSE">
+        <%= image_tag 'items/pink2'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/pink3'%> title="Розовый кальян E-HOSE">
+        <%= image_tag 'items/pink3'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/pink4'%> title="Розовый кальян E-HOSE">
+        <%= image_tag 'items/pink4'%>
+      </a>
+    </div>
+  </div>
+  <div class="item-text">
+    <h4> <%= @kalyan[2].name %> </h4>
+    <p> <%= @kalyan[2].cost%>  UAH </p>
+    <a href=#>
+      <div class="div-button">
+        КУПИТЬ
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<div class="kalyan-item container">
+  <div class="kalyan-image">
+     <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/red1'%> title="Красный кальян E-HOSE">
+      <%= image_tag 'items/red1'%>
+    </a>
+    <div class="hidden">
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/red2'%> title="Красный кальян E-HOSE">
+        <%= image_tag 'items/red2'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/red3'%> title="Красный кальян E-HOSE">
+        <%= image_tag 'items/red3'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/red4'%> title="Красный кальян E-HOSE">
+        <%= image_tag 'items/red4'%>
+      </a>
+    </div>
+  </div>
+  <div class="item-text">
+    <h4> <%= @kalyan[3].name %> </h4>
+    <p> <%= @kalyan[3].cost%>  UAH </p>
+    <a href=#>
+      <div class="div-button">
+        КУПИТЬ
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<div class="kalyan-item container">
+  <div class="kalyan-image">
+     <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/violet1'%> title="Фиолетовый кальян E-HOSE">
+      <%= image_tag 'items/violet1'%>
+    </a>
+    <div class="hidden">
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/violet2'%> title="Фиолетовый кальян E-HOSE">
+        <%= image_tag 'items/violet2'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/violet3'%> title="Фиолетовый кальян E-HOSE">
+        <%= image_tag 'items/violet3'%>
+      </a>
+      <a class="fancybox" rel="fancybox-thumb" href=<%= image_path 'items/violet4'%> title="Фиолетовый кальян E-HOSE">
+        <%= image_tag 'items/violet4'%>
+      </a>
+    </div>
+  </div>
+  <div class="item-text">
+    <h4> <%= @kalyan[4].name %> </h4>
+    <p> <%= @kalyan[4].cost%>  UAH </p>
+    <a href=#>
+      <div class="div-button">
+        КУПИТЬ
+      </div>
+    </a>
+  </div>
+</div>
+</div>
+<div class="cartridge-body">
 <h2 class="text-center"> Картрижды: </h2>
 <% @cartridge.each do |cartridge|%>
   <%= render :partial => "cartridge", :locals => {:cartridge => cartridge} %>
 <% end %>
 </div>
-<h1 class="text-center"> Тест-драйв кальяна от StarBuzz </h1>
+
 <div class="test-drive-container">
-  <div class="test-drive-text">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget ante dui. Integer fermentum eleifend consequat. Ut euismod laoreet ultricies. Integer molestie sem eu felis porttitor, quis aliquet massa dictum. Ut leo lacus, bibendum sed ligula at, posuere lacinia urna. Cras vitae tristique nisl. Suspendisse potenti. Cras ullamcorper bibendum blandit. In ut erat rhoncus leo vestibulum congue eget in lectus. Proin tincidunt porta lectus, sit amet porttitor ligula scelerisque eu. Proin ut dolor in nisl tristique cursus. Integer commodo sem eget enim venenatis sagittis.
-    </p>
-  </div>
-  <div class="test-drive-contact">
-    <%= render 'contact'%>
-  </div>
+  <h1 class="text-center"> ТЕСТ-ДРАЙВ КАЛЬЯНА </h1>
+  <%= render 'test_contact'%>
 </div>  
 <div class="carousel-container">
-  <%= render 'carousel'%>
 </div>  
 <div class="FAQ-container">
   <%= 12.times do %>
@@ -55,8 +186,4 @@
 </div>
 <div class="still-question-container">
   <h1> Всё еще остались вопросы? </h1>
-  <div class="still-render">
-    <%= render 'contact'%>
-  </div>
 </div>
-<%= render 'footer'%>

@@ -1,0 +1,12 @@
+<div class="contact-container modal">
+  <div class="contact-container contact-form">
+    <%= form_for :contact do |f| %>
+    <h4 class="contact-text"> Мы свяжемся с вами в течении 6 часов </h4>
+    <%= f.text_field :name, placeholder: "ВАШЕ ИМЯ*", class: "contact-input" %>
+    <%= f.text_field :phone, placeholder: "ВАШ ТЕЛЕФОН*", class: "contact-input" %>
+    <%= f.hidden_field :time, value: 12 %>
+    <%= f.submit "ЗАКАЗАТЬ КАЛЬЯН", class: "make-order-button"%>
+    <% end %>
+    <p class="contact-safe"> *Ваши контактные данные в безопасности </p>
+  </div>
+</div>
