@@ -86,7 +86,7 @@ a{
 .kalyan-image{
   display: block;
   border-radius: 50%;
-  height: 250px;
+  height: 100%;
   margin: 0 auto;
   & img{
     width: 100%;
@@ -312,7 +312,6 @@ menu, nav, section { display: block; }
 .header-contact{
   width: 30%;
   height: 85%;
-  //float: left;
   margin: 30px;
 }
 .text-center{
@@ -585,4 +584,7 @@ menu, nav, section { display: block; }
 }
 .phone-number{
   color: white;
+}
+.why.kalyan-image{
+  height: 100%;
 }
