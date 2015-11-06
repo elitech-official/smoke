@@ -4,12 +4,13 @@ $(document).ready(function() {
     closeEffect : 'none'
   });
   
+  $('.kalyan-item.container.cartridge').hide();
+  
   $('.list-group-item').click( function(event){ // лoвим клик пo ссылки с id="go"
     event.preventDefault(); // выключaем стaндaртную рoль элементa
     $('.list-group-item').removeClass('active');
     $(this).addClass('active');
     var cl = $(this).attr('data-id-cart');
-    alert('.'+ cl);
     $('.kalyan-item.container.cartridge').hide();
     $('.' + cl).css('display','block');
   });
