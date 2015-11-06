@@ -1,7 +1,7 @@
 class SmokeController < ApplicationController
   def index
     @kalyan = Kalyan.where(species: "item")
-    @cartridge = Kalyan.where(species: "cartridge")
+    @cartridges = Kalyan.where(species: "cartridge")
   end
 
   def new

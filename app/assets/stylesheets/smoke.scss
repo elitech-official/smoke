@@ -1,29 +1,32 @@
-@media all {html {font-size: 24px;}}@media all and (max-width:2200px){html {font-size: 27px;}}@media all and (max-width:1800px){html {font-size: 26px;}}@media all and (max-width:1400px){html {font-size: 25px;}}@media all and (max-width:1000px){html {font-size: 24px;}}@media all and (max-width:960px){html {font-size: 23px;}}@media all and (max-width:920px){html {font-size: 22px;}}@media all and (max-width:880px){html {font-size: 21px;}}@media all and (max-width:840px){html {font-size: 20px;}}@media all and (max-width:800px){html {font-size: 19px;}}@media all and (max-width:760px){html {font-size: 18px;}}@media all and (max-width:720px){html {font-size: 17px;}}@media all and (max-width:680px){html {font-size: 16px;}}@media all and (max-width:640px){html {font-size: 15px;}}@media all and (max-width:600px){html {font-size: 14px;}}@media all and (max-width:560px){html {font-size: 13px;}}@media all and (max-width:520px){html {font-size: 12px;}}
-
+@import "bootstrap";
 *{
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   letter-spacing: 2px;
+  text-decoration: none;
 }
-
-.header{
-  & *{
-    float: left;
+a{
+  text-decoration: none;
+  & :link{
+    text-decoration: none;
   }
-  & .row{
-    width: 100%;
-    height: 15%;
-    min-height: 50px;
-    line-height: 100px;
+  & :visited{
+    text-decoration: none;
+  }
+  & :hover{
+    text-decoration: none;
+  }
+}
+.header{
+  & img{
+    width:100%;
+    height:100%;
   }
   & .phone{
     display: block;
-    padding-top: 10px;
-    margin-right: 5%;
-    float: right;
     font-size: 2em;
-    width: calc(33% - 100px);
+    margin-top: 50px;
     & span{
       display: block;
       height: 50%;
@@ -33,50 +36,50 @@
       color: white;
     }
     & .modal-link{
-      width: 100%;
+      margin: 0 auto;
+      display: block;
+      background-color: white;
+      & h4{
+        font-size: .7em;
+        width: 100%;
+        color: gray;
+        text-align: center;
+      }
       background-color: #D3D3D3;
+      text-decoration: none;
+      & :hover{
+        text-decoration: none;
+      }
     }
   }
   & .image{
     margin: 0 auto;
-    float: left;
-    height: 17%;
-    width: calc( 33% - 50px);
+    //float: left;
     text-align: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     & img{
       margin: 0 auto;
       display: block;
     }
   }
   & .text{
-    width: 33%;
     text-align: center;
-    height: 100px;
-    min-width: 320px;
+    min-height: 100px;
   }
   & .order{
     display: inline;
-    float: rigth;
+    //float: rigth;
   }
 }
 
-.header-container{
-  height: 600px;
-  width: 100%;
+.header.container{
+  min-height:400px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: -50px;
   background: image-url('header.jpg') no-repeat;
   background-size: cover;
 }
 
-.kalyan-item.container{
-  width: 20%;
-  height: 400px;
-  display: block;
-  float: left;
-}
 .kalyan-image{
   display: block;
   border-radius: 50%;
@@ -90,12 +93,11 @@
   }
 }
 
-.why.body{
-  margin: 50px 0 50px 0;
+.why.container{
   & > h2{
     display: block;
     margin: 0 0 25px 0;
-    font-weight: 1000;
+    font-weight: 900;
   }
 }
 
@@ -103,27 +105,6 @@
   margin-top: 50px;
 }
 
-.overview-container{
-  width: 100%;
-  height: 800px;
-  text-align: center;
-  & h2{
-    text-align: center;
-  }
-  & .overview-text{
-    width: 30%;
-    height: 80%;
-    //margin: 20px;
-    display: inline-block;
-    float: left;
-  }
-  & .overview-video{
-    width: 65%;
-    height: 80%;
-    display: inline-block;
-    //float: right;
-  }
-}
 
 .video.text{
   font-size: 3em;
@@ -138,19 +119,6 @@ h1{
   font-size: 4em
 }
 
-.div-button{
-  width: 50%;
-  height: 50px;
-  border-radius: 25px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 1em;
-  border: 3px solid gray;
-  background-color: green;
-  color: white;
-  margin: 0 auto;
-  text-decoration: none;
-}
 .item-text{
   & .item-title{
     text-align: left;
@@ -169,7 +137,7 @@ h1{
   height: 600px;
   display: block;
   background: image-url('volan.jpg');
-  background-size: cover;
+  background-size: contain;
   margin-top: 25px;
   & h1{
     display:block;
@@ -195,28 +163,22 @@ h1{
     width: 50%;
     display: inline-block;
     height: 80%;
-    float: right;
+    //float: right;
   }
 }
 
 .contact-container{
   filter: alpha(opacity=70);
-  max-height: 450px;
-  position: absolute;
-  left: 5%;
   margin: 0 auto;
   display: block;
   & .text{
     display: block;
-    margin: 15px 0 15px 0;
     font-size: 1.5em;
     color: white;
-    font-weight: 1200;
+    font-weight: 900;
+    margin-top: 50px;
   }
   & .contact-form{
-    width: 100%;
-    min-width: 320px;
-    top: 125px;
     border-radius: 15px;
     border: 2px solid black;
     text-align: center;
@@ -299,7 +261,7 @@ menu, nav, section { display: block; }
   & .still-render{
     width: 30%;
     margin: 40px;
-    float: left;
+    //float: left;
   }
 }
 .footer-container{
@@ -345,40 +307,14 @@ menu, nav, section { display: block; }
 .header-contact{
   width: 30%;
   height: 85%;
-  float: left;
+  //float: left;
   margin: 30px;
 }
 .text-center{
   text-align: center;
 }
 
-.modal-link{
-    width: 75%;
-    height: 15%;
-    right: 50px;
-    margin: 5% auto;
-    padding: 3%;
-    display: block;
-    background-color: white;
-    & h4{
-      font-size: .7em;
-      width: 100%;
-      color: gray;
-      text-align: center;
-    }
-}
-
-.why.body{
-  display:block;
-  height: 800px;
-}
-
-.why.container{
-  border: none;
-  width: 25%;
-  height: 450px;
-  display: block;
-  float: left;
+.why{
   & img{
     border: none;
   }
@@ -439,7 +375,6 @@ menu, nav, section { display: block; }
 }
 
 .kalyan-item.container{
-  height: 450px;
   letter-spacing: 1px;
   margin: 20px auto;
   & .item-text{
@@ -447,7 +382,6 @@ menu, nav, section { display: block; }
     margin: 10px auto;
     & h4{
       line-height: 21px;
-      height: 60px;
       display: block;
       font-size: 1.5em;
       letter-spacing: 1px;
@@ -463,8 +397,19 @@ menu, nav, section { display: block; }
       text-decoration: none;
       & > div{
         font-size: 1.5em;
-        font-color: white;
         font-weight: bold;
+        width: 80%;
+        height: 50px;
+        text-align: center;
+        border-radius: 25px;
+        text-align: center;
+        line-height: 50px;
+        //font-size: 1em;
+        border: 3px solid gray;
+        background-color: green;
+        color: white;
+        margin: 0 auto;
+        text-decoration: none;
       }
     }
     & a:hover > div{
@@ -540,23 +485,19 @@ menu, nav, section { display: block; }
 }
 
 .absolute-block{
-  width: 50%;
-  left: 40%;
-  top: 60%;
-  position: absolute;
-  float:right;
+  margin-top:15%;
   & .title, .text{
     color: white;
     font-weight: 900;
   }
   & .title{
-    font-size: 3em;
-    letter-spacing: 3px;
+    //font-size: 3em;
+    //letter-spacing: 3px;
   }
   & .text{
-    font-size: 2em;
-    letter-spacing: 2px;
-    line-height: 20px;
+    //font-size: 2em;
+    //letter-spacing: 2px;
+   //line-height: 20px;
   }
 }
 
